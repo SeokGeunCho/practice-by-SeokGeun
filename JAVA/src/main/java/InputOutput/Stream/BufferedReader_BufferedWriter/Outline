@@ -1,0 +1,13 @@
+✅ BufferedReader / BufferedWriter란?
+클래스	설명
+BufferedReader	텍스트 파일을 버퍼에 저장하고 줄 단위로 읽기
+BufferedWriter	텍스트 파일을 버퍼에 저장하고 줄 단위로 쓰기
+버퍼(buffer)를 사용하기 때문에 읽기/쓰기 성능이 더 좋음
+
+한 줄씩 읽고 쓸 수 있어서 편리함 (readLine(), newLine() 사용)
+
+📌 기본 구조
+BufferedReader reader = new BufferedReader(new FileReader("파일경로"));
+BufferedWriter writer = new BufferedWriter(new FileWriter("파일경로"));
+
+FileReader/FileWriter 위에 감싸서 사용하는 구조!

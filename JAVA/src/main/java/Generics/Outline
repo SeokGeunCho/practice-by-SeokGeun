@@ -1,0 +1,29 @@
+✅ 제너릭이란?
+제너릭(Generics) 은 클래스나 메서드를 선언할 때,
+데이터 타입을 일반화해서 재사용 가능하게 만드는 기능이야.
+
+// 예시: 어떤 타입이 들어올지 모르니까 <T>로 지정
+class Box<T> {
+    private T item;
+
+    public void setItem(T item) {
+        this.item = item;
+    }
+
+    public T getItem() {
+        return item;
+    }
+}
+
+👉 쉽게 말하면...
+기존 방식 (Object 사용)	제너릭 사용 방식
+Object로 모든 타입 저장	타입을 미리 지정해서 안전하게 사용
+형변환 필요 (불편)	형변환 없이 바로 사용 가능
+
+✅ 왜 써야 해?
+장점	설명
+✅ 타입 안정성	잘못된 타입 저장 방지 (int에 String 넣는 실수 X)
+✅ 코드 재사용	여러 타입에 재사용 가능
+✅ 형변환 필요 없음	Object처럼 일일이 캐스팅 안 해도 됨
+
+✅ 예제 1: 간단한 제너릭 클래스 참조 class명 : Box, GenericExample1

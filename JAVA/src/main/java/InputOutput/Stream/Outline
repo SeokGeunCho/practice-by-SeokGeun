@@ -1,0 +1,29 @@
+✅ 자바 IO에서의 Stream 개요
+🎯 스트림(Stream)이란?
+
+데이터의 흐름을 의미해요.
+예: 파일에서 데이터를 한 줄씩 읽는다 → 데이터를 흐름(stream)으로 받아오는 것
+스트림은 단방향이에요. 한 번에 한 방향으로만 흐릅니다.
+
+입력 스트림(InputStream): 데이터를 "읽어옴"
+출력 스트림(OutputStream): 데이터를 "보냄"
+
+✅ 스트림의 종류 (기본 구조)
+1. 바이트 기반 스트림
+InputStream / OutputStream (1바이트 단위)   예: 이미지, 영상, 음악 파일
+
+     입력	                        출력
+FileInputStream	           FileOutputStream
+BufferedInputStream	       BufferedOutputStream
+
+2. 문자 기반 스트림
+Reader / Writer (2바이트 문자 단위) 예: 텍스트 파일
+
+    입력	             출력
+FileReader	      FileWriter
+BufferedReader	  BufferedWriter
+
+📌 기본 구조
+BufferedReader reader = new BufferedReader(new FileReader("파일경로"));
+BufferedWriter writer = new BufferedWriter(new FileWriter("파일경로"));
+FileReader/FileWriter 위에 감싸서 사용하는 구조!
