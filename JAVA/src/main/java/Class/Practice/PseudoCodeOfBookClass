@@ -1,0 +1,56 @@
+1. Book 클래스 정의
+   - title, author, price 필드 선언
+   - 생성자: title, author, price 초기화
+   - printInfo(): 책 정보 출력 메서드
+   - changePrice(): 책 가격 수정 메서드
+
+2. Main 클래스 실행
+   - Scanner 객체 생성
+   - ArrayList<Book> books 생성 (책 목록 저장)
+   - running 변수로 프로그램 반복 제어
+
+3. while (running):
+   - 메뉴 출력
+   - 사용자에게 메뉴 번호 입력받음
+
+   - switch(choice):
+       case 1: 책 등록
+           - 제목 입력
+           - 제목 중복 검사 (for문으로 비교)
+               - 중복일 경우 등록 취소
+           - 저자, 가격 입력
+           - Book 객체 생성 후 리스트에 추가
+
+       case 2: 전체 책 목록 출력
+           - 리스트가 비어 있으면 메시지 출력
+           - for-each문으로 모든 책의 정보 출력
+
+       case 3: 책 제목으로 검색
+           - 제목 입력
+           - for문으로 리스트에서 제목 일치하는 책 찾기
+               - 찾으면 정보 출력, 찾지 못하면 메시지 출력
+
+       case 4: 책 가격 수정
+           - 제목 입력
+           - for문으로 책 검색
+               - 찾으면 새 가격 입력 → changePrice() 호출
+               - 없으면 오류 메시지
+
+       case 5: 책 삭제
+           - 제목 입력
+           - for문으로 책 검색
+               - 찾으면 remove(index)
+               - 없으면 오류 메시지
+
+       case 6: 가격 오름차순 정렬 후 출력
+           - Collections.sort() + Comparator 사용
+           - 정렬된 리스트 출력
+
+       case 7: 종료
+           - running = false
+           - 종료 메시지 출력
+
+       default:
+           - 잘못된 입력일 경우 경고 메시지 출력
+
+4. while 종료 후 Scanner 닫기

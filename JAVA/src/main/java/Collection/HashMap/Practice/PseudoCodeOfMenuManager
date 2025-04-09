@@ -1,0 +1,39 @@
+1. HashMap<String, Integer> 생성 (메뉴이름 - 가격 저장)
+
+2. Scanner로 사용자 입력 받기
+
+3. while 루프:
+   - 메뉴 출력
+     1. 전체 메뉴 출력
+     2. 메뉴 추가
+     3. 메뉴 삭제
+     4. 가격 조회
+     5. 가격 수정
+     6. 종료
+
+   - 사용자 선택에 따라 switch 문 실행
+
+     case 1:
+       - keySet()으로 모든 메뉴 출력
+
+     case 2:
+       - 메뉴 이름, 가격 입력
+       - put() 으로 추가 (이미 있으면 덮어씀)
+
+     case 3:
+       - 삭제할 메뉴 이름 입력
+       - containsKey()로 존재 확인 → remove()
+
+     case 4:
+       - 조회할 메뉴 이름 입력
+       - containsKey()로 존재 확인 → get()
+
+     case 5:
+       - 수정할 메뉴 이름 입력
+       - 가격 입력 → put()으로 덮어쓰기
+
+     case 6:
+       - while 루프 종료
+
+     default:
+       - 잘못된 입력 안내

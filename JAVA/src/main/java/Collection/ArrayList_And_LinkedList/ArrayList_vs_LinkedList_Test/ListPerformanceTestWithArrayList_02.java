@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ListPerformanceTestWithArrayList_02 {
-    private static final int DATA_SIZE = 100_000; // DATA_SIZE = 100_000 → 10만 개의 데이터를 삽입
+    private static final int DATA_SIZE = 100_000;         // DATA_SIZE = 100_000 → 10만 개의 데이터를 삽입
 
     public static void main(String[] args) {
 
@@ -14,7 +14,7 @@ public class ListPerformanceTestWithArrayList_02 {
         long arrayStart = System.nanoTime();
 
         for (int i = 0; i < DATA_SIZE; i++) {
-            arrayList.add(arrayList.size() /2, i);  // add(size()/2, i) → 항상 리스트의 중간에 삽입
+            arrayList.add(arrayList.size()/2, i);  // add(size()/2, i) → 항상 리스트의 중간에 삽입
         }
         long arrayEnd = System.nanoTime();  // System.nanoTime() → 코드 실행 시간 측정
         System.out.println("ArrayList 중간 삽입 시간: " + (arrayEnd - arrayStart) / 1_000_000 + " ms");

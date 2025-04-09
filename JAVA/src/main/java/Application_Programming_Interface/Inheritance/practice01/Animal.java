@@ -1,3 +1,4 @@
+// 부모 클래스
 package Application_Programming_Interface.Inheritance.practice01;
 
 public class Animal {

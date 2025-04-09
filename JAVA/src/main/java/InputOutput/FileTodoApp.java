@@ -22,7 +22,7 @@ public class FileTodoApp {
 
         // 🔹 파일에 입력 내용 추가 (append 모드 true!)
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("todo.txt", true))) {
-                                                                //두 번째 파라미터 true는 append(덧붙이기) 기존 내용은 유지되고, 새로운 줄만 추가된다.
+        //두 번째 파라미터 true는 append(덧붙이기) 기존 내용은 유지되고, 새로운 줄만 추가된다.
             writer.write(lineToAdd);
             writer.newLine();
             System.out.println("✅ 할 일이 저장되었습니다!");

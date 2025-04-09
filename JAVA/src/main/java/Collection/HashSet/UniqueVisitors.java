@@ -35,4 +35,4 @@ public class UniqueVisitors {
         sc.close();
     }
 }
-// Set은 자동으로 중복 제거	→ 같은 IP는 한 번만 저장됨
+// Set은 자동으로 중복 제거	→  같은 IP는 한 번만 저장됨

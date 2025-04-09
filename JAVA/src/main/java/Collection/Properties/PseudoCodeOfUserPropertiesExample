@@ -1,0 +1,11 @@
+1. Scanner로 사용자 입력 받기 (이름, 나이, 이메일)
+
+2. Properties 객체 생성
+
+3. setProperty()로 입력받은 값 저장
+
+4. store()로 user.properties 파일에 저장
+
+5. load()로 user.properties 파일 다시 읽기
+
+6. getProperty()로 값을 읽어서 출력

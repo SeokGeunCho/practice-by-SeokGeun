@@ -1,0 +1,28 @@
+📦 Properties란?
+자바의 java.util.Properties 클래스는
+키=값 쌍으로 구성된 설정 정보를 저장하는 데 사용돼.
+
+보통 .properties 파일과 함께 사용되고,
+프로그램 설정을 외부 파일에서 불러와서 동적으로 처리할 수 있게 도와줘.
+
+✅ 주요 특징
+항목	            설명
+상속	       Hashtable<Object,Object>를 상속한 클래스
+저장 형식	   문자열(String)의 key-value 쌍
+파일 저장	   .properties 확장자 사용
+용도	       설정값 관리, 환경 설정 파일 등
+
+🛠 주요 메서드
+메서드	                                   설명
+load(InputStream)	                    파일에서 설정을 읽어옴
+getProperty(String key)              	키에 해당하는 값을 가져옴
+setProperty(String key, String value)	키와 값 설정
+store(OutputStream, String comment)  	설정 파일로 저장
+list(PrintStream)	                    콘솔에 설정 전체 출력
+
+✅ 실무에서 Properties 쓰는 경우
+DB 접속 정보 (db.url, db.user, db.password)
+로그인/세션 타임아웃
+외부 API 키
+다국어 처리 메시지 (message.properties)
+

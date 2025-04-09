@@ -1,0 +1,18 @@
+📌 HashMap이란?
+HashMap<K, V>는 자바에서 "키(Key)"와 "값(Value)" 쌍으로 데이터를 저장하는 자료구조야.
+배열이나 리스트처럼 순서가 중요한 게 아니라,
+키를 기준으로 값을 빠르게 검색하거나 추가, 삭제할 수 있어!
+
+🧩 주요 메서드 정리표
+메서드	                        설명
+put(key, value)	               키와 값 추가
+get(key)	                   해당 키의 값 가져오기
+remove(key)	                   해당 키의 키-값 삭제
+containsKey(key)	           해당 키가 존재하는지
+containsValue(value)	       해당 값이 존재하는지
+keySet()	                   전체 키들만 Set 형태로 반환
+values()	                   전체 값들만 Collection으로 반환
+entrySet()	                   키-값 쌍을 Set으로 반환
+clear()	                       전체 데이터 제거
+isEmpty()	                   비어 있는지 확인
+size()	                       데이터 개수 확인
