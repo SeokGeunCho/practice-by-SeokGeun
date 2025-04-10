@@ -1,0 +1,62 @@
+자바의 **enum(열거형)**은 상수를 정의할 때 사용하는 특별한 클래스입니다.
+예를 들어 요일, 달, 상태값 같은 고정된 값 집합을 다룰 때 유용해요.
+자바에서 enum을 사용하면 코드가 더 안전하고, 가독성이 좋으며, 에러 발생 가능성도 줄어듭니다.
+
+✨ 정리
+개념	             nn 설명
+enum	          고정된 상수 값들의 묶음
+values()	      모든 열거형 값을 배열로 반환
+name()	          열거형 상수 이름을 문자열로 반환
+ordinal()	      정의된 순서 (0부터 시작하는 인덱스)
+
+✅ [자바 Enum 복습 정리] 🚀
+
+✅ 1단계. enum 기본 사용
+
+enum Season {
+    SPRING, SUMMER, FALL, WINTER
+}
+목적: 미리 정해진 고정된 값 집합을 만들 때 사용
+
+Season now = Season.SPRING;
+→ now는 SPRING이라는 하나의 객체(enum 값)
+
+✅ 2단계. if문과 함께 사용
+
+if (now == Season.SUMMER) {
+    System.out.println("여름이야!");
+}
+== 비교 가능 (같은 enum 타입끼리만 가능)
+
+enum은 내부적으로 싱글톤 상수 객체이기 때문
+
+✅ 3단계. switch문과 함께 사용
+
+switch (now) {
+    case SPRING:
+        System.out.println("봄!");
+        break;
+    // ...
+}
+enum은 switch문과 찰떡궁합
+
+각 경우에 따라 다른 동작 처리 가능
+
+✅ 4단계. .values()로 전체 순회
+
+for (Season s : Season.values()) {
+    System.out.println(s);
+}
+values()는 enum의 모든 값 배열 반환
+
+반복문 돌릴 수 있어 실전에서 자주 사용
+
+✅ 5단계. 사용자 입력 → enum 변환
+
+String input = scanner.nextLine().toUpperCase();
+Season season = Season.valueOf(input);
+입력 받은 문자열 → enum 값으로 변환
+
+🔁 흐름 요약
+
+[기본 선언] → [조건문 if/switch] → [전체 출력] → [입력 처리] → [속성 부여]
