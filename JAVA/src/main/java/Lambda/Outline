@@ -1,0 +1,42 @@
+✅ 자바 람다식 주요 함수형 인터페이스 총정리
+인터페이스	                형태	             설명                   메서드 이름
+Runnable	            () → void	     매개변수 X, 반환 X	        run()
+Supplier<T>	            () → T	         매개변수 X, 반환 O	        get()
+Consumer<T>	            (T) → void	     매개변수 O, 반환 X	        accept()
+Function<T,R>          	(T) → R	         입력 T → 출력 R        	    apply()
+Predicate<T>	        (T) → boolean	 조건 검사 (true/false)	    test()
+BiFunction<T, U, R>	    (T, U) → R	     두 입력 → 출력	            apply()
+
+
+import java.util.function.*;
+
+public class LambdaSummary {
+    public static void main(String[] args) {
+
+        // 1. Runnable - 매개변수 없음, 반환 없음
+        Runnable run = () -> System.out.println("Runnable 실행 중입니다.");
+        run.run(); // 👉 run() 메서드 실행
+
+        // 2. Supplier - 매개변수 없음, 값을 반환함
+        Supplier<String> sup = () -> "공급된 문자열";
+        System.out.println(sup.get()); // 👉 "공급된 문자열"
+
+        // 3. Consumer - 값을 받아서 출력만 (리턴 없음)
+        Consumer<String> con = name -> System.out.println("이름: " + name);
+        con.accept("홍길동"); // 👉 "이름: 홍길동"
+
+        // 4. Function - 입력값을 받아 변환 후 반환
+        Function<Integer, String> func = i -> "숫자: " + i;
+        System.out.println(func.apply(100)); // 👉 "숫자: 100"
+
+        // 5. Predicate - 조건 검사 (true/false 반환)
+        Predicate<String> isEmpty = str -> str.isEmpty();
+        System.out.println(isEmpty.test(""));       // 👉 true
+        System.out.println(isEmpty.test("hello"));  // 👉 false
+
+        // 6. BiFunction - 두 개의 입력값을 받아 결과 반환
+        BiFunction<String, String, Boolean> bf = (a, b) -> a.equals(b);
+        System.out.println(bf.apply("java", "java"));   // 👉 true
+        System.out.println(bf.apply("java", "hello"));  // 👉 false
+    }
+}
